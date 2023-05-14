@@ -1,0 +1,363 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="Width=device-Width, initial-scale=1.0">
+
+        <title>Reminder - Inicio De Sesion</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="Style-Start.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 class="title">Reminder</h1>
+        <h2 class="subtitle" id="subtitle">Bienvenido a Reminder</h2>
+        <h4 class="info" id="info">Con la utilidad de Reminder se permite notificarse y enterarse de todo lo sucedido desde un acceso gratuito a la pagina web.</h4>
+        <img class="banner-1" id="banner-1" src="Banner 1.png" style="display: block; transition: 1s; margin: 50px auto 0px auto;">
+        <img class="banner-2" id="banner-2" src="Banner 2.png" style="display: block; transition: 1s; margin: -450px auto 0px auto;">
+        <div id="banner-3">
+            <button class="banner-3 button-1" id="button-1" style="transition: 1s; margin: -370px 0px 0px 20px;" onclick="functionButton_1()"><input class="checkbox" id="checkbox-1" type="checkbox" onclick="functionButton_1()" checked><a id="test-1" style="display: block;">💯</a> <br> <a id="test-2" style="display: block;">Evaluaciones</a></button>
+            <button class="banner-3 button-2" id="button-2" style="transition: 1s; margin: -370px 0px 0px 20px;" onclick="functionButton_2()"><input class="checkbox" id="checkbox-2" type="checkbox" onclick="functionButton_2()" checked><a id="homework-1" style="display: block;">📃</a> <br> <a id="homework-2" style="display: block;">Tareas</a></button>
+            <button class="banner-3 button-3" id="button-3" style="transition: 1s; margin: -370px 0px 0px 20px;" onclick="functionButton_3()"><input class="checkbox" id="checkbox-3" type="checkbox" onclick="functionButton_3()"><a id="ring-1" style="display: block;">🛎️</a> <br> <a id="ring-2" style="display: block;">Timbres</a></button>
+            <button class="banner-3 button-4" id="button-4" style="transition: 1s; margin: -370px 0px 0px 20px;"><input class="checkbox-4" id="checkbox-4" type="checkbox" onclick="functionButton_4()"><a id="update-1" style="display: block;">🔄</a> <br> <a id="update-2" style="display: block;">Actualizaciones Diarias</a></button>
+        </div>
+        <div class="banner-4" id="banner-4">
+            <h2 class="banner-4-subtitle">Iniciar sesion</h2>
+            <input class="user-name" id="user-name" placeholder="Nombre del usuario" type="text">
+            <input class="user-password" id="user-password" placeholder="Contraseña del usuario" type="text">
+            <a><input class="terms-of-use" id="terms-of-use" type="checkbox">Acepto los <a href="./Terms Of Use.html" style="color: #0f82d0;">Terminos y condiciones de uso</a></a>
+            <h4 class="user-error" id="user-error"><a style="color: #ff0000;">!</a> El nombre de usuario no debe estar vacio. <br> <a style="color: #ff0000;">!</a> La contraseña no debe estar vacia ni contener espacios</h4>
+        </div>
+        <button class="start" id="start" onclick="continueButton()">Continuar</button>
+    </body>
+    <script>
+        if (localStorage.getItem("User Name")) {
+            location.href = "./App.html";
+        } else {
+            ScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            ScrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+            window.onscroll = function() {
+                window.scrollTo(scrollLeft, scrollTop);
+            };
+
+            var Width = screen.width;
+            var Height = screen.height;
+
+            var Scene = "0";
+
+            var Button_1 = "True";
+            var Button_2 = "True";
+            var Button_3 = "False";
+            var Button_4 = "False";
+
+            console.log("Screen Width: " + Width + "px");
+            console.log("Screen Height: " + Height + "px");
+
+            document.getElementById("start").style.width = (Width - 40) + "px";
+
+            if (((Height) - (170 + 70 + 30)) - (Width - ((((Width / 2) * 0.10) * 2) + 30)) >= 0) {
+                document.getElementById("button-1").style.width = (Width - ((((Width / 2) * 0.10) * 2) + 30)) / 2;
+                document.getElementById("button-2").style.width = (Width - ((((Width / 2) * 0.10) * 2) + 30)) / 2;
+                document.getElementById("button-3").style.width = (Width - ((((Width / 2) * 0.10) * 2) + 30)) / 2;
+                document.getElementById("button-4").style.width = (Width - ((((Width / 2) * 0.10) * 2) + 30)) / 2;
+
+                document.getElementById("button-1").style.height = (Width - ((((Width / 2) * 0.10) * 2) + 30)) / 2;
+                document.getElementById("button-2").style.height = (Width - ((((Width / 2) * 0.10) * 2) + 30)) / 2;
+                document.getElementById("button-3").style.height = (Width - ((((Width / 2) * 0.10) * 2) + 30)) / 2;
+                document.getElementById("button-4").style.height = (Width - ((((Width / 2) * 0.10) * 2) + 30)) / 2;
+            } else if (Width - ((Height - (200 + 70 + 30)) + 70) >= 0) {
+                document.getElementById("button-1").style.width = (Height - (200 + 70 + 30)) / 2;
+                document.getElementById("button-2").style.width = (Height - (200 + 70 + 30)) / 2;
+                document.getElementById("button-3").style.width = (Height - (200 + 70 + 30)) / 2;
+                document.getElementById("button-4").style.width = (Height - (200 + 70 + 30)) / 2;
+
+                document.getElementById("button-1").style.height = (Height - (200 + 70 + 30)) / 2;
+                document.getElementById("button-2").style.height = (Height - (200 + 70 + 30)) / 2;
+                document.getElementById("button-3").style.height = (Height - (200 + 70 + 30)) / 2;
+                document.getElementById("button-4").style.height = (Height - (200 + 70 + 30)) / 2;
+            } else {
+                document.getElementById("button-1").style.width = ((Height - (200 + 70 + 30)) - (((Height - (200 + 70 + 30)) + 70) - Width)) / 2;
+                document.getElementById("button-2").style.width = ((Height - (200 + 70 + 30)) - (((Height - (200 + 70 + 30)) + 70) - Width)) / 2;
+                document.getElementById("button-3").style.width = ((Height - (200 + 70 + 30)) - (((Height - (200 + 70 + 30)) + 70) - Width)) / 2;
+                document.getElementById("button-4").style.width = ((Height - (200 + 70 + 30)) - (((Height - (200 + 70 + 30)) + 70) - Width)) / 2;
+
+                document.getElementById("button-1").style.height = ((Height - (200 + 70 + 30)) - (((Height - (200 + 70 + 30)) + 70) - Width)) / 2;
+                document.getElementById("button-2").style.height = ((Height - (200 + 70 + 30)) - (((Height - (200 + 70 + 30)) + 70) - Width)) / 2;
+                document.getElementById("button-3").style.height = ((Height - (200 + 70 + 30)) - (((Height - (200 + 70 + 30)) + 70) - Width)) / 2;
+                document.getElementById("button-4").style.height = ((Height - (200 + 70 + 30)) - (((Height - (200 + 70 + 30)) + 70) - Width)) / 2;
+            }
+
+            document.getElementById("test-1").style.fontSize = document.getElementById("button-1").offsetWidth * 0.3;
+            document.getElementById("test-1").style.margin = ((document.getElementById("button-1").offsetWidth - document.getElementById("test-1").offsetHeight) / 2) - 40 + "px auto 0px auto";
+            document.getElementById("test-2").style.fontSize = document.getElementById("button-1").offsetWidth * 0.1;
+
+            document.getElementById("homework-1").style.fontSize = document.getElementById("button-2").offsetWidth * 0.3;
+            document.getElementById("homework-1").style.margin = ((document.getElementById("button-2").offsetWidth - document.getElementById("homework-1").offsetHeight) / 2) - 40 + "px auto 0px auto";
+            document.getElementById("homework-2").style.fontSize = document.getElementById("button-2").offsetWidth * 0.1;
+
+            document.getElementById("ring-1").style.fontSize = document.getElementById("button-3").offsetWidth * 0.3;
+            document.getElementById("ring-1").style.margin = ((document.getElementById("button-3").offsetWidth - document.getElementById("ring-1").offsetHeight) / 2) - 40 + "px auto 0px auto";
+            document.getElementById("ring-2").style.fontSize = document.getElementById("button-3").offsetWidth * 0.1;
+
+            document.getElementById("update-1").style.fontSize = document.getElementById("button-4").offsetWidth * 0.3;
+            document.getElementById("update-1").style.margin = ((document.getElementById("button-4").offsetWidth - document.getElementById("ring-1").offsetHeight) / 2) - 40 + "px auto 0px auto";
+            document.getElementById("update-2").style.fontSize = document.getElementById("button-4").offsetWidth * 0.1;
+            document.getElementById("update-2").style.margin = "-25px auto 0px auto";
+
+            document.getElementById("checkbox-1").style.width = document.getElementById("button-1").offsetWidth * 0.1;
+            document.getElementById("checkbox-1").style.height = document.getElementById("button-1").offsetWidth * 0.1;
+            document.getElementById("checkbox-1").style.borderRadius = (document.getElementById("button-1").offsetWidth * 0.1) / 2 + "px";
+            document.getElementById("checkbox-1").style.margin = "10px " + (document.getElementById("button-1").offsetWidth - (document.getElementById("checkbox-1").offsetWidth * 2)) * -1 + "px 0px 0px";
+
+            document.getElementById("checkbox-2").style.width = document.getElementById("button-2").offsetWidth * 0.1;
+            document.getElementById("checkbox-2").style.height = document.getElementById("button-2").offsetWidth * 0.1;
+            document.getElementById("checkbox-2").style.borderRadius = (document.getElementById("button-2").offsetWidth * 0.1) / 2 + "px";
+            document.getElementById("checkbox-2").style.margin = "10px " + (document.getElementById("button-2").offsetWidth - (document.getElementById("checkbox-2").offsetWidth * 2)) * -1 + "px 0px 0px";
+
+            document.getElementById("checkbox-3").style.width = document.getElementById("button-3").offsetWidth * 0.1;
+            document.getElementById("checkbox-3").style.height = document.getElementById("button-3").offsetWidth * 0.1;
+            document.getElementById("checkbox-3").style.borderRadius = (document.getElementById("button-3").offsetWidth * 0.1) / 2 + "px";
+            document.getElementById("checkbox-3").style.margin = "10px " + (document.getElementById("button-3").offsetWidth - (document.getElementById("checkbox-3").offsetWidth * 2)) * -1 + "px 0px 0px";
+
+            document.getElementById("checkbox-4").style.width = document.getElementById("button-4").offsetWidth * 0.1;
+            document.getElementById("checkbox-4").style.height = document.getElementById("button-4").offsetWidth * 0.1;
+            document.getElementById("checkbox-4").style.borderRadius = (document.getElementById("button-4").offsetWidth * 0.1) / 2 + "px";
+            document.getElementById("checkbox-4").style.margin = "10px " + (document.getElementById("button-4").offsetWidth - (document.getElementById("checkbox-4").offsetWidth * 2)) * -1 + "px 0px 0px";
+
+            function continueButton() {
+                if (Scene == "0") {
+                    Scene = "1";
+
+                    document.getElementById("subtitle").innerHTML = "Administrar sus elementos digitales";
+                    document.getElementById("info").innerHTML = "Use, Guarde y Almacene sus elementos digitales unicos en esta aplicacion web.";
+
+                    document.getElementById("banner-1").style.margin = "50px 0px 0px 25px";
+
+                    setTimeout(function(){
+                        document.getElementById("banner-1").style.margin = "50px auto 0px -" + Width + "px";
+                    }, 100);
+
+                    document.getElementById("banner-1").style.visibility = "hidden";
+
+
+
+                    setTimeout(function(){
+                        document.getElementById("banner-2").style.margin = "-450px 0px 0px " + Width + "px";
+                        document.getElementById("banner-2").style.visibility = "visible";
+                    }, 100);
+
+                    setTimeout(function(){
+                        if (Width > 325) {
+                            document.getElementById("banner-2").style.margin = "-450px 0px 0px " + ((Width - 325) / 2) + "px";
+                        } else {
+                            document.getElementById("banner-2").style.margin = "-450px 0px 0px 0px";
+                        }
+                    }, 200);
+
+                    setTimeout(function(){
+                        document.getElementById("banner-2").style.margin = "-450px auto 0px auto";
+                    }, 1200);
+
+                } else if (Scene == "1") {
+                    Scene = "2";
+
+                    document.getElementById("start").innerHTML = "Aceptar";
+                    document.getElementById("subtitle").innerHTML = "Seleccione sus preferencias";
+                    document.getElementById("info").innerHTML = "Selecciones sus preferencias de configuracion inicial para el uso de esta aplicacion web.";
+
+                    if (Width > 325) {
+                        document.getElementById("banner-2").style.margin = "-450px 0px 0px " + ((Width - 325) / 2) + "px";
+                    } else {
+                        document.getElementById("banner-2").style.margin = "-450px 0px 0px 0px";
+                    }
+
+                    setTimeout(function(){
+                        document.getElementById("banner-2").style.margin = "-450px 0px 0px -" + Width + "px";
+                    }, 100);
+
+                    document.getElementById("banner-2").style.visibility = "hidden";
+
+
+
+                    setTimeout(function(){
+                        document.getElementById("button-1").style.transition = "none";
+                        document.getElementById("button-1").style.margin = "-370px 0px 0px " + Width + "px";
+                        document.getElementById("button-1").style.visibility = "visible";
+
+                        document.getElementById("button-3").style.transition = "none";
+                        if ((542 - 170 - document.getElementById("button-4").offsetHeight - 25) > 0) {
+                            document.getElementById("button-3").style.margin = "-" + (542 - 170 - document.getElementById("button-4").offsetHeight - 25) + "px 0px 0px " + Width + "px";
+                        } else {
+                            document.getElementById("button-3").style.margin = "-" + ((542 - 170 - document.getElementById("button-4").offsetHeight - 25) * -1) + "px 0px 0px " + Width + "px";
+                        }
+                        document.getElementById("button-3").style.visibility = "visible";
+                    }, 100);
+
+                    setTimeout(function(){
+                        document.getElementById("button-2").style.transition = "none";
+                        document.getElementById("button-2").style.margin = "-370px 0px 0px " + Width + "px";
+                        document.getElementById("button-2").style.visibility = "visible";
+
+                        document.getElementById("button-4").style.transition = "none";
+                        if (Width <= 415) {
+                            document.getElementById("button-4").style.margin = "-" + (542 - 170 - document.getElementById("button-4").offsetHeight - 25) + "px 0px 0px " + Width + "px";
+                        } else {
+                            document.getElementById("button-4").style.margin = "-" + document.getElementById("button-4").offsetHeight + "px 0px 0px " + Width + "px";
+                        }
+                        document.getElementById("button-4").style.visibility = "visible";
+                    }, 350);
+
+                    setTimeout(function(){
+                        document.getElementById("button-1").style.transition = "1s";
+                        document.getElementById("button-1").style.margin = "-370px 0px 0px " + ((Width - (document.getElementById("button-1").offsetWidth * 2) - 25) / 2) + "px";
+
+                        document.getElementById("button-3").style.transition = "1s";
+
+                        if ((542 - 170 - document.getElementById("button-4").offsetHeight - 25) > 0) {
+                            document.getElementById("button-3").style.margin = "-" + (542 - 170 - document.getElementById("button-4").offsetHeight - 25) + "px 0px 0px " + ((Width - (document.getElementById("button-3").offsetWidth * 2) - 25) / 2) + "px";
+                        } else {
+                            document.getElementById("button-3").style.margin = "-" + ((542 - 170 - document.getElementById("button-4").offsetHeight - 25) * -1) + "px 0px 0px " + ((Width - (document.getElementById("button-3").offsetWidth * 2) - 25) / 2) + "px";                        
+                        }
+                    }, 200);
+
+                    setTimeout(function(){
+                        document.getElementById("button-2").style.transition = "1s";
+                        document.getElementById("button-2").style.margin = "-370px 0px 0px " + (Width - (document.getElementById("button-2").offsetWidth) - ((Width - (document.getElementById("button-2").offsetWidth * 2) - 25) / 2)) + "px";
+
+                        document.getElementById("button-4").style.transition = "1s";
+                        if (Width <= 415) {
+                            document.getElementById("button-4").style.margin = "-" + (542 - 170 - document.getElementById("button-4").offsetHeight - 25) + "px 0px 0px " + (Width - (document.getElementById("button-4").offsetWidth) - ((Width - (document.getElementById("button-4").offsetWidth * 2) - 25) / 2)) + "px";
+                        } else {
+                            document.getElementById("button-4").style.margin = "-" + document.getElementById("button-4").offsetHeight + "px 0px 0px " + (Width - (document.getElementById("button-4").offsetWidth) - ((Width - (document.getElementById("button-4").offsetWidth * 2) - 25) / 2)) + "px";
+                        }
+                    }, 450);
+
+                    setTimeout(function(){
+                        document.getElementById("button-1").style.transition = "none";
+                        document.getElementById("button-2").style.transition = "none";
+                        document.getElementById("button-3").style.transition = "none";
+                        document.getElementById("button-4").style.transition = "none";
+                    }, 1450);
+                } else if (Scene == "2") {
+                    Scene = "3";
+
+                    document.getElementById("start").innerHTML = "Finalizar";
+                    document.getElementById("subtitle").style.visibility = "hidden";
+                    document.getElementById("info").style.visibility = "hidden";
+
+                    document.getElementById("button-4").style.marginTop = "-" + (parseInt(document.getElementById("button-3").style.marginTop) * -1) + "px";
+
+                    document.getElementById("button-1").style.position = "absolute";
+                    document.getElementById("button-2").style.position = "absolute";
+                    document.getElementById("button-3").style.position = "absolute";
+                    document.getElementById("button-4").style.position = "absolute";
+                    document.getElementById("banner-3").style.position = "absolute";
+
+                    setTimeout(function(){
+                        document.getElementById("button-1").style.transition = "1s";
+                        document.getElementById("button-2").style.transition = "1s";
+                        document.getElementById("button-3").style.transition = "1s";
+                        document.getElementById("button-4").style.transition = "1s";
+                        document.getElementById("banner-3").style.transition = "1s";
+                    }, 100);
+
+                    setTimeout(function(){
+                        document.getElementById("banner-3").style.margin = "0px 0px 0px -" + Width + "px";
+                    }, 200);
+
+                    setTimeout(function(){
+                        document.getElementById("banner-4").style.visibility = "visible";
+
+                        document.getElementById("user-name").style.width = (Width - 60);
+
+                        document.getElementById("user-password").style.width = (Width - 60);
+                    }, 300);
+                } else if (Scene == "3" && document.getElementById("terms-of-use").checked) {
+                    if (document.getElementById("user-name").value != "") {
+                        if (document.getElementById("user-password").value == "" || document.getElementById("user-password").value.includes(" ")) {
+                            document.getElementById("user-error").style.visibility = "visible";
+                        } else {
+                            localStorage.setItem("User Name", document.getElementById("user-name").value);
+                            localStorage.setItem("User Password", document.getElementById("user-password").value);
+
+                            if (Button_1 == "True") {
+                                localStorage.setItem("Test", "True");
+                            } else if (Button_1 == "False") {
+                                localStorage.setItem("Test", "False");
+                            }
+
+                            if (Button_2 == "True") {
+                                localStorage.setItem("Homework", "True");
+                            } else if (Button_2 == "False") {
+                                localStorage.setItem("Homework", "False");
+                            }
+
+                            if (Button_3 == "True") {
+                                localStorage.setItem("Ring", "True");
+                            } else if (Button_3 == "False") {
+                                localStorage.setItem("Ring", "False");
+                            }
+
+                            if (Button_4 == "True") {
+                                localStorage.setItem("Update", "True");
+                            } else if (Button_4 == "False") {
+                                localStorage.setItem("Update", "False");
+                            }
+
+                            setTimeout(function(){
+                                location.href = "./App.html";
+                            }, 100);
+                        }
+                    } else {
+                        document.getElementById("user-error").style.visibility = "visible";
+                    }
+                }
+            }
+
+            function functionButton_1() {
+                if (Button_1 == "False") {
+                    Button_1 = "True";
+
+                    document.getElementById("checkbox-1").checked = true;
+                } else if (Button_1 == "True") {
+                    Button_1 = "False";
+
+                    document.getElementById("checkbox-1").checked = false;
+                }
+            }
+
+            function functionButton_2() {
+                if (Button_2 == "False") {
+                    Button_2 = "True";
+
+                    document.getElementById("checkbox-2").checked = true;
+                } else if (Button_2 == "True") {
+                    Button_2 = "False";
+
+                    document.getElementById("checkbox-2").checked = false;
+                }
+            }
+
+            function functionButton_3() {
+                if (Button_3 == "False") {
+                    Button_3 = "True";
+
+                    document.getElementById("checkbox-3").checked = true;
+                } else if (Button_3 == "True") {
+                    Button_3 = "False";
+
+                    document.getElementById("checkbox-3").checked = false;
+                }
+            }
+        }
+    </script>
+</html>

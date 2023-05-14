@@ -1,0 +1,948 @@
+* {
+    font-family: 'Poppins';
+    font-weight: 300;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background: #ffffff;
+}
+
+
+
+.header {
+    height: 40px;
+    background: #ffffff;
+    box-shadow: 0px 2px #50505040;
+}
+
+nav ul {
+    display: table;
+    list-style: none;
+    overflow: hidden;
+    margin: 0px auto 0px 120px;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #505050;
+    padding: 11px 7.5px 0px 7.5px;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+.contenido {
+    padding-top: 80px;
+}
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+    overflow:hidden;
+}
+
+
+
+.menu-bar {
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.login-image {
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.open-image {
+    width: 25px;
+    height: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.close-image {
+    width: 22.5px;
+    height: 22.5px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    visibility: hidden;
+    width: 0px;
+    background: #ffffff;
+    transition: 1s;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tab {
+    cursor: pointer;
+    margin: 0px;
+}
+
+
+
+.app {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    width: 230px;
+    background: #0f82d0;
+    color: #ffffff;
+    border: 2px solid transparent;
+    margin: 30px auto 0px auto;
+    padding: 10px 0px 10px 0px;
+}
+
+.app:hover {
+    background: transparent;
+    border: 2px solid #0f82d0;
+}
+
+
+@media (min-width: 0px) and (max-width: 320px) {
+    h1 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h2 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h4 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        margin: -26px 0px 0px 0px;
+    }
+
+    .subtitle-1 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 40px 0px 0px 0px;
+    }
+
+    .subtitle-2 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-3 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-4 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-5 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin: 60px 20px 0px 20px;
+    }
+
+    .subtitle-6 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 5px 0px 5px;
+    }
+
+    .info-1 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 300;
+        margin: 20px 20px 0px 20px;
+    }
+
+    .info-2 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-3 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-4 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-5 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 20px 15px 20px 15px;
+    }
+
+    .icon {
+        display: block;
+        width: 55px;
+        height: 55px;
+        padding: 0px;
+        margin: 30px auto 0px auto;
+    }
+
+
+
+    .menu {
+        z-index: 1;
+        position: absolute;
+        margin: 35px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .login-image {
+        visibility: visible;
+        display: block;
+        margin: -123px 10px 0px auto;
+        padding: 0px;
+    }
+
+    .open-image {
+        visibility: visible;
+        display: block;
+        margin: -23px auto 0px 10px;
+        padding: 0px;
+    }
+
+    .close-image {
+        visibility: hidden;
+        display: block;
+        margin: -25px auto 0px 10px;
+        padding: 0px;
+    }
+
+    .tab {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    h1 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h2 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h4 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        margin: -25px 0px 0px 0px;
+    }
+
+    .subtitle-1 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 40px 0px 0px 0px;
+    }
+
+    .subtitle-2 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-3 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-4 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-5 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin: 60px 20px 0px 20px;
+    }
+
+    .subtitle-6 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 5px 0px 5px;
+    }
+
+    .info-1 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 300;
+        margin: 20px 20px 0px 20px;
+    }
+
+    .info-2 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-3 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-4 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-5 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 20px 15px 20px 15px;
+    }
+
+    .icon {
+        display: block;
+        width: 55px;
+        height: 55px;
+        padding: 0px;
+        margin: 30px auto 0px auto;
+    }
+
+
+
+    .menu {
+        z-index: 1;
+        position: absolute;
+        margin: -58px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .login-image {
+        visibility: visible;
+        display: block;
+        margin: -91px 10px 0px auto;
+        padding: 0px;
+    }
+
+    .open-image {
+        visibility: visible;
+        display: block;
+        margin: -23px auto 0px 10px;
+        padding: 0px;
+    }
+
+    .close-image {
+        visibility: hidden;
+        display: block;
+        margin: -25px auto 0px 10px;
+        padding: 0px;
+    }
+
+    .tab {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 443px) {
+    h1 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h2 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h4 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        margin: -25px 0px 0px 0px;
+    }
+
+    .subtitle-1 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 40px 0px 0px 0px;
+    }
+
+    .subtitle-2 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-3 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-4 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-5 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin: 60px 20px 0px 20px;
+    }
+
+    .subtitle-6 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 5px 0px 5px;
+    }
+
+    .info-1 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 300;
+        margin: 20px 20px 0px 20px;
+    }
+
+    .info-2 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-3 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-4 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-5 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 20px 15px 20px 15px;
+    }
+
+    .icon {
+        display: block;
+        width: 55px;
+        height: 55px;
+        padding: 0px;
+        margin: 30px auto 0px auto;
+    }
+
+
+
+    .menu {
+        z-index: 1;
+        position: absolute;
+        margin: -58px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .login-image {
+        visibility: visible;
+        display: block;
+        margin: -91px 10px 0px auto;
+        padding: 0px;
+    }
+
+    .open-image {
+        visibility: visible;
+        display: block;
+        margin: -23px auto 0px 10px;
+        padding: 0px;
+    }
+
+    .close-image {
+        visibility: hidden;
+        display: block;
+        margin: -25px auto 0px 10px;
+        padding: 0px;
+    }
+
+    .tab {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 444px) and (max-width: 659px) {
+    h1 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h2 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h4 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        margin: -25px 0px 0px 0px;
+    }
+
+    .subtitle-1 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 40px 0px 0px 0px;
+    }
+
+    .subtitle-2 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-3 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-4 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-5 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin: 60px 20px 0px 20px;
+    }
+
+    .subtitle-6 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 5px 0px 5px;
+    }
+
+    .info-1 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 300;
+        margin: 20px 20px 0px 20px;
+    }
+
+    .info-2 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-3 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-4 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-5 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 20px 15px 20px 15px;
+    }
+
+    .icon {
+        display: block;
+        width: 55px;
+        height: 55px;
+        padding: 0px;
+        margin: 30px auto 0px auto;
+    }
+
+
+
+    .menu {
+        z-index: 1;
+        position: absolute;
+        margin: -58px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .login-image {
+        visibility: visible;
+        display: block;
+        margin: -60px 10px 0px auto;
+        padding: 0px;
+    }
+
+    .open-image {
+        visibility: visible;
+        display: block;
+        margin: -23px auto 0px 10px;
+        padding: 0px;
+    }
+
+    .close-image {
+        visibility: hidden;
+        display: block;
+        margin: -25px auto 0px 10px;
+        padding: 0px;
+    }
+
+    .tab {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 660px) and (max-width: 786px) {
+    h1 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h2 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h4 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        margin: -25px 0px 0px 0px;
+    }
+
+    .subtitle-1 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 40px 0px 0px 0px;
+    }
+
+    .subtitle-2 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-3 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-4 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-5 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin: 60px 20px 0px 20px;
+    }
+
+    .subtitle-6 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 5px 0px 5px;
+    }
+
+    .info-1 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 300;
+        margin: 20px 20px 0px 20px;
+    }
+
+    .info-2 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-3 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-4 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-5 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 20px 15px 20px 15px;
+    }
+
+    .icon {
+        display: block;
+        width: 55px;
+        height: 55px;
+        padding: 0px;
+        margin: 30px auto 0px auto;
+    }
+
+
+
+    .menu {
+        z-index: 1;
+        position: absolute;
+        margin: 8px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .login-image {
+        visibility: visible;
+        display: block;
+        margin: -28px 10px 0px auto;
+        padding: 0px;
+    }
+
+    .open-image {
+        visibility: visible;
+        display: block;
+        margin: -23px auto 0px 10px;
+        padding: 0px;
+    }
+
+    .close-image {
+        visibility: hidden;
+        display: block;
+        margin: -25px auto 0px 10px;
+        padding: 0px;
+    }
+
+    .tab {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 789px) and (max-width: 9999px) {
+    h1 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h2 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h4 {
+        color: #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .title {
+        text-align: left;
+        font-size: 18px;
+        font-weight: 500;
+        margin: -27px 0px 0px 10px;
+    }
+
+    .subtitle-1 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 40px 0px 0px 0px;
+    }
+
+    .subtitle-2 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-3 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-4 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 0px 0px 20px;
+    }
+
+    .subtitle-5 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin: 60px 20px 0px 20px;
+    }
+
+    .subtitle-6 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 450;
+        margin: 40px 5px 0px 5px;
+    }
+
+    .info-1 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 300;
+        margin: 20px 20px 0px 20px;
+    }
+
+    .info-2 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-3 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-4 {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .info-5 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 20px 15px 20px 15px;
+    }
+
+    .icon {
+        display: block;
+        width: 55px;
+        height: 55px;
+        padding: 0px;
+        margin: 30px auto 0px auto;
+    }
+
+
+
+    .menu {
+        visibility: hidden;
+    }
+
+    .login-image {
+        visibility: visible;
+        display: block;
+        margin: 0px 10px 0px auto;
+        padding: 0px;
+    }
+
+    .open-image {
+        visibility: hidden;
+    }
+
+    .close-image {
+        visibility: hidden;
+    }
+}
